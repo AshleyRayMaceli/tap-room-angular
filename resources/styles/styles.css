@@ -7,3 +7,7 @@ body {
 .selected {
   color: #22bdf0;
 }
+
+input {
+  color: black;
+}
