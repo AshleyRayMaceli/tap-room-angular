@@ -11,7 +11,7 @@ import { Keg } from './keg.model';
       <input placeholder="Brand" class="col-sm-8 input-lg" #newKegBrand>
       <input placeholder="Price per Pint" class="col-sm-8 input-lg" #newKegPrice>
       <input placeholder="ABV" class="col-sm-8 input-lg" #newKegAbv>
-      <button (click)="addKeg(newKegName, newKegBrand, newKegPrice, newKegAbv)">Tap</button>
+      <button (click)="addKeg(newKegName, newKegBrand, newKegPrice, newKegAbv)" class="btn-info btn-lg add-button">Tap It!</button>
     </div>
   `
 })
