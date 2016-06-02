@@ -3,15 +3,22 @@ import { KegComponent } from './keg.component';
 import { KegDetailsComponent } from './keg-details.component';
 import { Keg } from './keg.model';
 import { NewKegComponent } from './new-keg.component';
+import { PricePipe } from './price.pipe';
 
 @Component({
   selector: 'keg-list',
   inputs: ['kegList'],
   outputs: ['onKegSelect'],
+  pipes: [PricePipe],
   directives: [KegComponent, KegDetailsComponent, NewKegComponent],
   template: `
     <div class="col-xs-6 keg-list">
-      <keg-display *ngFor="#currentKeg of kegList"
+      <select (change)="onChange($event.target.value)">
+        <option value="all" selected="selected">Show All</option>
+        <option value="expensive">Show Brews $6 And Up</option>
+        <option value="cheap">Show Cheap Brews</option>
+      </select>
+      <keg-display *ngFor="#currentKeg of kegList | price:filterPrice"
         (click)="kegClicked(currentKeg)"
         [class.selected]="currentKeg === selectedKeg"
         [keg]="currentKeg">
@@ -30,15 +37,19 @@ export class KegListComponent {
   public kegList: Keg[];
   public onKegSelect: EventEmitter<Keg>;
   public selectedKeg: Keg;
+  public filterPrice: string = "all";
   constructor() {
     this.onKegSelect = new EventEmitter();
   }
   kegClicked(clickedKeg: Keg): void {
-    console.log("Child:" + clickedKeg);
+    // console.log("Child:" + clickedKeg);
     this.selectedKeg = clickedKeg;
     this.onKegSelect.emit(clickedKeg);
   }
   createKeg(newKeg: Keg): void {
     this.kegList.push(newKeg);
+  }
+  onChange(filterOption) {
+    this.filterPrice = filterOption;
   }
 }

@@ -12,6 +12,11 @@ input {
   color: black;
 }
 
+select {
+  font-size: 22pt;
+  width: 250px;
+}
+
 .add-button {
   margin-bottom: 10px;
   margin-left: 10px;

@@ -29,6 +29,6 @@ export class AppComponent {
     ];
   }
   kegWasSelected(clickedKeg: Keg): void {
-    console.log("Parent:" + clickedKeg);
+    // console.log("Parent:" + clickedKeg);
   }
 }
