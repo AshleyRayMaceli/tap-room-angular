@@ -14,6 +14,7 @@ body {
 .title {
   font-size: 50pt;
   font-weight: bold;
+  color: #22bdf0;
 }
 
 .cheap {
@@ -35,6 +36,10 @@ body {
 
 .keg-list {
   border-right: dotted black 3px;
+}
+
+.details-title {
+  font-size: 72pt;
 }
 
 input {
@@ -77,4 +82,13 @@ select {
   border: solid black 5px;
   border-radius: 10px;
   background-color: #22bdf0;
+}
+
+.details-label {
+  text-decoration: underline;
+}
+
+keg-display:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

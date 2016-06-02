@@ -23,7 +23,7 @@ import { PricePipe } from './price.pipe';
           <h4><img src="resources/images/hops.png" class="hops"> Strong Brew (ABV 8%+)</h4>
           <h4><img src="resources/images/cheap.png" class="colorBox"> Cheaper Brew ($5 or less)</h4>
           <h4><img src="resources/images/expensive.png" class="colorBox"> Expensive Brew ($6 or more)</h4>
-          <h4><img src="resources/images/warning.png" class="warning"> Less than 10 Pints Left in Keg</h4>
+          <h4><img src="resources/images/warning.png" class="warning"> 10 Pints Or Less Left in Keg</h4>
         </div>
         <keg-display *ngFor="#currentKeg of kegList | price:filterPrice"
           (click)="kegClicked(currentKeg)"
@@ -34,7 +34,7 @@ import { PricePipe } from './price.pipe';
         </keg-display>
       </div>
       <div *ngIf="selectedKeg" class="col-xs-6 keg-details">
-        <h3>Keg Details:</h3>
+        <h3 class="details-title">Keg Details:</h3>
         <keg-details
           [keg]="selectedKeg">
         </keg-details>
