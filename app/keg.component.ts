@@ -5,7 +5,7 @@ import { Keg } from './keg.model';
   selector: 'keg-display',
   inputs: ['keg'],
   template: `
-    <h3>{{ keg.name }}</h3>
+    <h3>{{ keg.name }} <img *ngIf="keg.abv > 8" src="resources/images/hops.png" class="hops"></h3>
   `
 })
 export class KegComponent {
