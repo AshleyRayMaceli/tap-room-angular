@@ -28,8 +28,10 @@ export class AppComponent {
       new Keg("Double Stack", "Great Notion", 4, 7.5),
       new Keg("Dat Boi", "OSW", 11, 69.0),
       new Keg("Hypernova Triple IPA", "Ecliptic", 10, 12.0),
-      new Keg("Phobos Single Hop Red Ale", "Ecliptic", 7, 5.2)
-
+      new Keg("Phobos Single Hop Red Ale", "Ecliptic", 7, 5.2),
+      new Keg("Sour Cherry Cider", "Woodchuck", 4, 4.2),
+      new Keg("Heady Topper", "The Alchemist", 15, 8.0),
+      new Keg("SwitchBOCK Keller Bier", "Switchback", 5, 7.0)
     ];
   }
   kegWasSelected(clickedKeg: Keg): void {

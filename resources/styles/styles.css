@@ -6,6 +6,7 @@ body {
 }
 
 .dapperblook {
+  margin-top: 5px;
   height: 250px;
   width: 250px;
 }
@@ -32,6 +33,10 @@ body {
   }
 }
 
+.keg-list {
+  border-right: dotted black 3px;
+}
+
 input {
   color: black;
 }
@@ -52,6 +57,7 @@ select {
 }
 
 .add-button {
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
   padding-top: 8px;
