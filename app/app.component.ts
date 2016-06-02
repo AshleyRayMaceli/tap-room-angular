@@ -8,7 +8,7 @@ import { Keg } from './keg.model';
   directives: [KegListComponent, KegDetailsComponent],
   template: `
     <div class="container">
-      <h1>Turtle Tap Room</h1>
+      <h1 class="title"><img class="dapperblook" src="resources/images/dapperblook.png">Tasty Taps for Cool Chaps</h1>
       <div class="row">
         <keg-list
           [kegList]="kegs"
